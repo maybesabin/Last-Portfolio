@@ -12,6 +12,12 @@ const Projects = () => {
             livePreview: "https://sabinui.vercel.app/"
         },
         {
+            title: "Organic Karnali",
+            description: "e-commerce site with cart & checkout functionality",
+            sourceCode: "https://github.com/E-pravidi-Web-Dev/organickarnali_frontend",
+            livePreview: "https://organickarnalifrontend.web.app/"
+        },
+        {
             title: "SwiftOps",
             description: "An AI SaaS-themed landing page",
             sourceCode: "https://github.com/maybesabin/SwiftOps",
@@ -38,8 +44,8 @@ const Projects = () => {
         {
             title: "Old Portfolio",
             description: "my old portfolio website",
-            sourceCode: "https://github.com/maybesabin/Old-Portfolio",
-            livePreview: "https://codersabin.netlify.app/"
+            sourceCode: "https://github.com/maybesabin/Portfolio-Latest",
+            livePreview: "https://sxbin.netlify.app/"
         }
     ];
 

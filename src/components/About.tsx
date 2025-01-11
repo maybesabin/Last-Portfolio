@@ -4,7 +4,8 @@ import { fadeIn } from "../utils/animation.ts"
 
 const About = () => {
     return (
-        <div className="w-full flex flex-col items-start gap-2">
+        <div
+            className="w-full flex flex-col items-start gap-2">
             <motion.p
                 initial={fadeIn.initial}
                 animate={fadeIn.animate}
@@ -21,14 +22,16 @@ const About = () => {
                 I'm available for internships, full time opportunities and freelance projects.
             </motion.p>
 
-            <motion.div
-                initial={fadeIn.initial}
-                animate={fadeIn.animate}
-                transition={{ ...fadeIn.transition, delay: 0.15 }}
-                className="border-neutral-800 border cursor-pointer hover:bg-neutral-700 transition-all rounded-lg px-2 py-1.5 flex items-center gap-2 -mt-1">
-                <IconBriefcase size={17} />
-                <h3 className="text-sm">Hire Me</h3>
-            </motion.div>
+            <a href="mailto:highsabin987@gmail.com" target="_blank">
+                <motion.div
+                    initial={fadeIn.initial}
+                    animate={fadeIn.animate}
+                    transition={{ ...fadeIn.transition, delay: 0.15 }}
+                    className="border-neutral-800 border cursor-pointer hover:bg-neutral-700 transition-all rounded-lg px-2 py-1.5 flex items-center gap-2 -mt-1">
+                    <IconBriefcase size={17} />
+                    <h3 className="text-sm">Hire Me</h3>
+                </motion.div>
+            </a>
         </div>
     )
 }

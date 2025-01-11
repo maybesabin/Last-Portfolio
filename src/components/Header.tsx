@@ -5,10 +5,10 @@ import { fadeIn } from "../utils/animation.ts"
 
 const Header = () => {
     const socials = [
-        { icon: <IconBrandX className="md:size-[27px] size-[20px]" />, title: "Twitter" },
-        { icon: <IconBrandGithub className="md:size-[27px] size-[20px]" />, title: "Github" },
-        { icon: <IconBrandLinkedin className="md:size-[27px] size-[20px]" />, title: "Linkedin" },
-        { icon: <IconBrandInstagram className="md:size-[27px] size-[20px]" />, title: "Instagram" }
+        { icon: <IconBrandX className="md:size-[27px] size-[20px]" />, title: "Twitter", link: "https://x.com/16calc" },
+        { icon: <IconBrandGithub className="md:size-[27px] size-[20px]" />, title: "Github", link: "https://github.com/maybesabin" },
+        { icon: <IconBrandLinkedin className="md:size-[27px] size-[20px]" />, title: "Linkedin", link: "https://www.linkedin.com/in/sabinhamal/" },
+        { icon: <IconBrandInstagram className="md:size-[27px] size-[20px]" />, title: "Instagram", link: "https://www.instagram.com/codeandlifts/" }
     ]
     return (
         <div
@@ -32,13 +32,15 @@ const Header = () => {
                 </motion.p>
                 <div className="flex items-center gap-2">
                     {socials.map((item, idx) => (
-                        <motion.div
-                            initial={fadeIn.initial}
-                            animate={fadeIn.animate}
-                            transition={{ ...fadeIn.transition, delay: idx * 0.1 }}
-                            key={idx} title={item.title} className="bg-black border border-zinc-700 text-zinc-300 rounded-lg p-1 cursor-pointer">
-                            {item.icon}
-                        </motion.div>
+                        <a href={item.link} target="_blank">
+                            <motion.div
+                                initial={fadeIn.initial}
+                                animate={fadeIn.animate}
+                                transition={{ ...fadeIn.transition, delay: idx * 0.1 }}
+                                key={idx} title={item.title} className="bg-black border border-zinc-700 text-zinc-300 rounded-lg p-1 cursor-pointer">
+                                {item.icon}
+                            </motion.div>
+                        </a>
                     ))}
                 </div>
             </div>
